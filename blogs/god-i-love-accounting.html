@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Being Spoiled for Choice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        /* font */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* main navbar */
+        #navbar {
+            overflow: hidden;
+            background-color: #ffffff;
+            padding: 28px 10px;
+            transition: 0.09s;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+            display: flex;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        }
+
+        /* Links on right-hand */
+        #navbar a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .brand-container {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar-right {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 2em;
+        }
+
+        #navbar-right .links a {
+            padding: 0.25em 1.75em;
+        }
+
+        /* avatar/profile */
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        /* about section, center text */
+        .center {
+            margin: auto;
+            text-align: left;
+            width: 50%;
+            padding-top: 9rem;
+            padding-bottom: 3rem;
+            font-size: 17px
+        }
+
+        /* cards */
+        .card-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            margin: 0;
+            list-style: none;
+        }
+
+        .button {
+            display: inline-flex;
+            height: 50px;
+            padding: 10px;
+            background: #707070;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            color: #ffffff;
+            align-items: center;
+        }
+
+        .button:hover {
+            background: #252525;
+            text-decoration: none;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<!-- header -->
+
+<div id="navbar">
+    <div class="brand-container">
+        <img src="../images\logo.png" alt="" class="avatar" style="object-fit: cover;">
+    </div>
+
+    <div id="navbar-right">
+        <div class="links">
+            <a href="../index.html">
+                Home
+            </a>
+            <a href="../course-notes.html">
+                Content
+            </a>
+            <a href="../blogs.html">
+                Blog
+            </a>
+            <a href="../about.html">
+                About
+            </a>
+            <a href="../contacts.html">
+                Contacts
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <div class="center">
+        <h1>God I <em>LOVE</em> Accounting</h1>
+        <h6 style="color: #a0a0a0;">1 September 2023</h6>
+        <p>I often get asked whether it's normal to hate going to work to which I usually go, “Of course, it is”.
+        </p>
+
+        <p> If you're 18 and the job you hate is your first job, it's pretty normal. Nobody is handing out super fun
+            gigs to 18-year-olds, and you have to pay your dues. I see a lot of students desperately looking for work
+            and when I suggest they start somewhere small like the service industry (which is always hiring), they scoff
+            at it thinking those jobs are beneath them. That simply won't do. If you have a mouth to feed, you need to stop
+            expecting jobs to be handed to you on a silver platter and give reason to why you're of value. This is why people go down
+            the route of post-secondary education and the trades; it's better to have a handful of diamonds than a pile
+            of sand. Also, if you're (arbitrarily) 45 years old and you loathe going into work every day, I don't know
+            if it's normal, but I can admit that the situation does suck. Most people don't have the luxury of finding
+            their passion and being able to fully pursue it. You won't hear people saying, "God, I <em>LOVE</em>
+            accounting! I can't wait to get to the firm and just open up Excel!".You’ll rarely see anyone like that.
+        </p>
+
+        <p> For the sake of brevity, let's call it "work" instead of a job. I hate work. I hate having to do work. I
+            hate having the feeling of work looming over me. I like getting work done; there's a nice feeling I get when
+            I
+            press that submit button. But when I'm actually doing it, the feeling is terrible; I hate it. Obviously, it
+            depends on the type of work. There's a big difference between making a video on YouTube, working on an
+            offshore oil rig in the middle of the ocean, and selling a used Ford F150; there's a significant difference
+            across all these jobs. But I've never clocked into work thinking, <em>"Ooh, work today!"</em> — it's always
+            hate. I
+            hate doing work, but I still trudge through it because that's life. The goal should be to find something you
+            don't hate quite as much as the other things because that's the best you're going to get, and that's the
+            truth most people won't tell you.
+        </p>
+
+        <p> Let's say you love playing video games. Try getting a job where you play video games for a living. See how
+            much you like them after that. Do you like having sex? Go join the adult entertainment industry; see how
+            that goes for you. It doesn't work out that way. The folks who make the doughnuts never eat them, and that's
+            just the way life works. If you really want to love your job, then you better make your vocation your
+            vacation; otherwise, it's just not going to happen.
+        </p>
+    </div>
+</body>
+
+<!-- footer -->
+<footer class="footer mt-auto py-4" style="background-color: #252525;">
+    <div class="container">
+        <div style="color: #707070;">
+            © 2023 Gordon Jeon
+        </div>
+    </div>
+</footer>
+
+<!-- scripts -->
+<script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 28.5 || document.documentElement.scrollTop > 28.5) {
+            document.getElementById("navbar").style.padding = "10px 10px";
+            document.getElementById("logo").style.fontSize = "20px";
+        } else {
+            document.getElementById("navbar").style.padding = "28px 10px";
+            document.getElementById("logo").style.fontSize = "35px";
+        }
+    }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

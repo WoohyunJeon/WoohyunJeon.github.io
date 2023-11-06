@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>About</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        /* font */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* main navbar */
+        #navbar {
+            overflow: hidden;
+            background-color: #ffffff;
+            padding: 28px 10px;
+            transition: 0.09s;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+            display: flex;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        }
+
+        /* Links on right-hand */
+        #navbar a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .brand-container {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar-right {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 2em;
+        }
+
+        #navbar-right .links a {
+            padding: 0.25em 1.75em;
+        }
+
+        /* avatar/profile */
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        .center {
+            margin: auto;
+            text-align: center;
+            width: 60%;
+            padding: 50px;
+        }
+
+        .profile-pic {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: auto;
+        }
+
+        /* text */
+        .header {
+            font-weight: bold;
+        }
+
+        /* image center*/
+        .center {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+    </style>
+</head>
+
+<div id="navbar">
+    <div class="brand-container">
+        <img src="images\logo.png" alt="" class="avatar" style="object-fit: cover;">
+    </div>
+
+    <div id="navbar-right">
+        <div class="links">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="content.html">
+                Content
+            </a>
+            <a href="blogs.html">
+                Blog
+            </a>
+            <a href="about.html">
+                About
+            </a>
+            <a href="contacts.html">
+                Contact
+            </a>
+        </div>
+    </div>
+</div>
+
+<div>
+    <div style="float: left; width:50%; height:100%; object-fit:cover; text-align:left;">
+        <h1 class="header" style="padding-top: 15%; padding-bottom: 2%; padding-left: 5%;">
+            Who am I?</h1>
+        <p style="padding-left: 5%; padding-right: 5%">
+            My name is Gordon and I'm currently an engineering student at the University of Toronto Faculty of Applied
+            Science and Engineering. This website was originally developed to simply store my university notes &
+            projects but due to the interest shown by my peers and professors, I've decided to develop it to serve as a
+            survival guide for oncoming students or just a space for those curious to learn something new.
+        </p>
+        <p style="padding-left: 5%; padding-right: 5%">
+            I strive to make the content I post educational and entertaining by focusing on presentation and making the
+            narrative engaging and I also hope it will help you appreciate and discover the joy I have in learning.
+        </p>
+        <p style="padding-left: 5%; padding-right: 5%">
+            The majority of the content you see will remain free and open source. All my course notes, projects, files,
+            and tutorials will be available for anyone to use in the hopes it supplements you in the learning process.
+        </p>
+        <p style="padding-left: 5%; padding-right: 5%">
+            Happy Reading,
+            <br>Gordon<br>
+        </p>
+    </div>
+    <div style="float: right; width:50%; height:100%; padding-top: 6%;">
+        <img src="images/logo.png" alt="" style="width:60%;" class="center">
+    </div>
+</div>
+
+<script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 28.5 || document.documentElement.scrollTop > 28.5) {
+            document.getElementById("navbar").style.padding = "10px 10px";
+            document.getElementById("logo").style.fontSize = "20px";
+        } else {
+            document.getElementById("navbar").style.padding = "28px 10px";
+            document.getElementById("logo").style.fontSize = "35px";
+        }
+    }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Content</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        /* font */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* main navbar */
+        #navbar {
+            overflow: hidden;
+            background-color: #ffffff;
+            padding: 28px 10px;
+            transition: 0.09s;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+            display: flex;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        }
+
+        /* Links on right-hand */
+        #navbar a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .brand-container {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar-right {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 2em;
+        }
+
+        #navbar-right .links a {
+            padding: 0.25em 1.75em;
+        }
+
+        /* avatar/profile */
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        /* cards */
+        .card-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            margin: 0;
+            list-style: none;
+        }
+
+        .card {
+            width: 15.5%;
+            height: auto;
+            border-style: solid;
+            border-color: #D3D3D3;
+        }
+
+        .card-padding {
+            padding: 10px 10px 10px 10px;
+        }
+
+        .button {
+            display: inline-flex;
+            height: 50px;
+            padding: 10px;
+            background: #707070;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            color: #ffffff;
+            align-items: center;
+        }
+
+        .button:hover {
+            background: #252525;
+            text-decoration: none;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<!-- header -->
+
+<div id="navbar">
+    <div class="brand-container">
+        <img src="images\logo.png" alt="" class="avatar" style="object-fit: cover;">
+    </div>
+
+    <div id="navbar-right">
+        <div class="links">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="content.html">
+                Content
+            </a>
+            <a href="blogs.html">
+                Blog
+            </a>
+            <a href="about.html">
+                About
+            </a>
+            <a href="contacts.html">
+                Contact
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <h1 style="padding-top: 9%; padding-left: 15%;">First Year University - 2022</h1>
+    <!-- <h2 style="padding-left: 15%;">Fall</h2> -->
+    <div class="card-container">
+        <div class="card">
+            <img src="notes\uni notes\Y1\ESC102 Handbook\card-image.jpg" alt=""
+                style="height: 50%; width:100%; object-fit: cover;">
+            <div class="card-padding">
+                <h3><b>ESC102: Praxis II - Engineering Handbook</b></h3>
+                <p>This handbook was written in place of the typical final. Contains information to aid in
+                    engineering design with strong emphasis in collaboration and communication.
+                </p>
+                <a href="notes\uni notes\Y1\ESC102 Handbook\Praxis Handbook.pdf" class="button">Download</span></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="notes\uni notes\Y1\MAT185 Assignments\euclidian-space.png" alt=""
+                style="height: 50%; width:100%; object-fit: cover;">
+            <div class="card-padding">
+                <h3><b>MAT185: Linear Algebra - Course Notes</b></h3>
+                <p>Notes I wrote for the course which loosely follow the exclusive textbook.
+                </p>
+                <a href="notes\uni notes\Y1\MAT185 Assignments\Notes.pdf" class="button">Download</span></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="notes\uni notes\Y1\MSE160 Notes\1024px-Graphen.jpg" alt=""
+                style="height: 50%; width:100%; object-fit: cover;">
+            <div class="card-padding">
+                <h3><b>MSE160: Molecules and Materials - Course Notes</b></h3>
+                <p>An extension of classical chemistry and thermodynamics taught in highschool and some content learnt
+                    in CIV102: Structures and Materials. Notes range from material properties, engineering applications,
+                    and structures.
+                </p>
+                <a href="notes\uni notes\Y1\MSE160 Notes\Notes.pdf" class="button">Download</span></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="notes\uni notes\Y1\PHY180 Pendulum Report\Screenshot 2023-07-29 185730.jpg" alt=""
+                style="height: 50%; width:100%; object-fit: cover;">
+            <div class="card-padding">
+                <h3><b>PHY180: Classical Mechanics - Pendulum Report</b></h3>
+                <p>A fun little term-long experiment-project that focuses on analyzing the motion of a pendulum. Served as
+                    practice for using LaTeX and covers review of decaying harmonic motion.
+                </p>
+                <a href="notes\uni notes\Y1\PHY180 Pendulum Report\Report.pdf" class="button">Download</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <img src="notes\uni notes\Y1\ECE159 Cheat Sheet\cover.jpg" alt=""
+                style="height: 50%; width:100%; object-fit: cover;">
+            <div class="card-padding">
+                <h3><b>ECE159: Fundamentals of Electric Circuits - Cheat Sheet</b></h3>
+                <p>Written for the course examinations. Covers content with examples ranging from
+                    superposition, op-amps, source transformations, to conversions in the time domain.
+                </p>
+                <a href="notes\uni notes\Y1\ECE159 Cheat Sheet\ECE Cheat Sheet.pdf" class="button">Download</span></a>
+            </div>
+        </div>
+    </div>
+
+    <h1 style="padding-top: 2rem; padding-left: 22rem;">Self-Learning</h1>
+    <div class="card-container">
+        <div class="card">
+            <img src="notes\uni notes\Y1\Electrical Eng. Notes\Screenshot 2023-07-31 010619.jpg" alt=""
+                style="height: 50%; width:100%; object-fit: cover;">
+            <div class="card-padding">
+                <h3><b>Electrophysics and Electrical Engineering</b></h3>
+                <p>Notes from self-learning during 2023 Summer. Covers electrostatics & Coulomb's Law, electric
+                    fields, electric potential energy concepts, magnetic fields & electromagnetism, Maxwell's
+                    Equations, and the wave nature of light.
+                </p>
+                <a href="notes\uni notes\Y1\Electrical Eng. Notes\Elec. E Self Study.pdf"
+                    class="button">Download</span></a>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="notes\self-study\QFT Seminars\sem1.jpg" alt=""
+                style="height: 50%; width:100%; object-fit: cover;">
+            <div class="card-padding">
+                <h3><b>Intro to Quantum Field Theory, Part 1 (SR Review)</b></h3>
+                <p>Suitable for undergrads+ with prior exposure to quantum mechanics. Assuming you know QM (Shankar,
+                    Sakurai) and CM (Taylor). Part 1 covers a review of SR, Galilean Relativity, conversion of Basis,
+                    understanding the Lorenz transformations, Time Dilation, and Index Notation.
+                </p>
+                <a href="notes\self-study\QFT Seminars\QFT Seminar 1 Notes.pdf" class="button">Download</span></a>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+<!-- scripts -->
+<script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 28.5 || document.documentElement.scrollTop > 28.5) {
+            document.getElementById("navbar").style.padding = "10px 10px";
+            document.getElementById("logo").style.fontSize = "20px";
+        } else {
+            document.getElementById("navbar").style.padding = "28px 10px";
+            document.getElementById("logo").style.fontSize = "35px";
+        }
+    }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

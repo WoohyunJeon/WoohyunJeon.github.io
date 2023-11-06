@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blogs</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        /* font */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* main navbar */
+        #navbar {
+            overflow: hidden;
+            background-color: #ffffff;
+            padding: 28px 10px;
+            transition: 0.09s;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+            display: flex;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        }
+
+        /* Links on right-hand */
+        #navbar a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .brand-container {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar-right {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 2em;
+        }
+
+        #navbar-right .links a {
+            padding: 0.25em 1.75em;
+        }
+
+        /* about section, center text */
+        .center {
+            margin: auto;
+            text-align: left;
+            width: 50%;
+            padding-top: 9rem;
+            padding-bottom: 3rem;
+            font-size: 17px
+        }
+
+        /* avatar/profile */
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        /* cards */
+        .card-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            margin: 0;
+            list-style: none;
+        }
+
+        .card {
+            width: 15.5%;
+            height: auto;
+            border-style: solid;
+            border-color: #D3D3D3;
+        }
+
+        .card-padding {
+            padding: 10px 10px 10px 10px;
+        }
+
+        .button {
+            display: inline-flex;
+            height: 50px;
+            padding: 10px;
+            background: #707070;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            color: #ffffff;
+            align-items: center;
+        }
+
+        .button:hover {
+            background: #252525;
+            text-decoration: none;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<!-- header -->
+<div id="navbar">
+    <div class="brand-container">
+        <img src="images\logo.png" alt="" class="avatar" style="object-fit: cover;">
+    </div>
+
+    <div id="navbar-right">
+        <div class="links">
+            <a href="index.html">
+                Home
+            </a>
+            <a href="content.html">
+                Content
+            </a>
+            <a href="blogs.html">
+                Blog
+            </a>
+            <a href="about.html">
+                About
+            </a>
+            <a href="contacts.html">
+                Contact
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <div class="center">
+        <!-- header -->
+        <h1>
+            <b>Blogs</b>
+        </h1>
+
+        <!-- 2023 -->
+        <h2 style="padding-top: 3rem;">
+            <b>2023</b>
+        </h2>
+
+        <a href="blogs\god-i-love-accounting.html" style="text-decoration: none; color: rgb(0, 72, 180);">
+            <b>God I <em>LOVE</em> Accounting</b>
+        </a>
+        September 1 2023
+        <p> I often get asked whether it's normal to hate going to work to which I usually go, “Of course, it is”.
+        </p>
+
+        <a href="blogs\being-spoiled-for-choice.html" style="text-decoration: none; color: rgb(0, 72, 180);">
+            <b>Being Spoiled for Choice</b>
+        </a>
+        Auguest 2 2023
+        <p> During the academic year, I read or heard about the problem people have with doing something (yes, I’ve
+            forgotten entirely what that "something" is or was, but bear with me). This issue most people had with this
+            something was never being able to get a concrete answer when it came to finding a good resource when
+            learning something new.
+        </p>
+    </div>
+</body>
+
+<!-- scripts -->
+<script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 28.5 || document.documentElement.scrollTop > 28.5) {
+            document.getElementById("navbar").style.padding = "10px 10px";
+            document.getElementById("logo").style.fontSize = "20px";
+        } else {
+            document.getElementById("navbar").style.padding = "28px 10px";
+            document.getElementById("logo").style.fontSize = "35px";
+        }
+    }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>

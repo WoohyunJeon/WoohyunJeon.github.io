@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Being Spoiled for Choice</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
+    <style>
+        /* font */
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* main navbar */
+        #navbar {
+            overflow: hidden;
+            background-color: #ffffff;
+            padding: 28px 10px;
+            transition: 0.09s;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 99;
+            display: flex;
+            box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .2);
+        }
+
+        /* Links on right-hand */
+        #navbar a {
+            float: left;
+            color: black;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 18px;
+            line-height: 25px;
+            border-radius: 4px;
+            display: flex;
+            justify-content: space-between
+        }
+
+        #navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+        .brand-container {
+            width: 10%;
+            display: flex;
+            justify-content: center;
+        }
+
+        #navbar-right {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-right: 2em;
+        }
+
+        #navbar-right .links a {
+            padding: 0.25em 1.75em;
+        }
+
+        /* avatar/profile */
+        .avatar {
+            vertical-align: middle;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+
+        /* about section, center text */
+        .center {
+            margin: auto;
+            text-align: left;
+            width: 50%;
+            padding-top: 9rem;
+            padding-bottom: 3rem;
+            font-size: 17px
+        }
+
+        /* cards */
+        .card-container {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            gap: 2rem;
+            padding: 2rem;
+            margin: 0;
+            list-style: none;
+        }
+
+        .button {
+            display: inline-flex;
+            height: 50px;
+            padding: 10px;
+            background: #707070;
+            border: none;
+            outline: none;
+            border-radius: 3px;
+            overflow: hidden;
+            cursor: pointer;
+            text-decoration: none;
+            color: #ffffff;
+            align-items: center;
+        }
+
+        .button:hover {
+            background: #252525;
+            text-decoration: none;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<!-- header -->
+
+<div id="navbar">
+    <div class="brand-container">
+        <img src="../images\logo.png" alt="" class="avatar" style="object-fit: cover;">
+    </div>
+
+    <div id="navbar-right">
+        <div class="links">
+            <a href="../index.html">
+                Home
+            </a>
+            <a href="../course-notes.html">
+                Content
+            </a>
+            <a href="../blogs.html">
+                Blog
+            </a>
+            <a href="../about.html">
+                About
+            </a>
+            <a href="../contacts.html">
+                Contacts
+            </a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <div class="center">
+        <h1>Being Spoiled for Choice</h1>
+        <h6 style="color: #a0a0a0;">2 August 2023</h6>
+        <p>During the academic year, I read or heard about the problem people have with doing something (yes, I’ve
+            forgotten entirely what that "something" is or was, but bear with me). This issue most people had with this
+            something was never being able to get a concrete answer when it came to finding a good resource when learning
+            something new.
+        </p>
+    
+        <p>With that covered, I can now apply it to linear algebra and actually make sense.
+        </p>
+    
+        <p>Linear algebra was one of the hardest but also the funnest courses I had the privilege of taking. From vector spaces to
+            eigenvalues, MAT185 really opened my eyes to just how abstract but applicable the subject was. There was not a day
+            where I would face problems where I was told to solve for all the components of an electric circuit or even prove
+            the operation of a derivative and I would consult the tools I learned in linear algebra to overcome it. However
+            one of the biggest issues I came across was right as the course started, and it was about not knowing where to start. I was
+            scratching my head on whether or not I should review the prerequisite course’s notes or if I should consult
+            another textbook as a supplement. Figuring out where to even start is always difficult. It always feels like
+            a commitment - the first few notes you take must stay there and the first principles you learn are indicative of
+            the final product. And when this bit fails, it can dishearten you and cause you to struggle when you try to take
+            it anywhere further.
+        </p>
+    
+        <p>Many universities teach a first course in linear algebra that focuses on computations and is rather uncommitted,
+            followed by a second course which focuses more on the abstract and structure theory. In my opinion, this is
+            because of the inertia of how much content can be covered and departments having to teach service linear algebra
+            while not offering a separate math major in conjunction. Really, it's better to see both approaches in
+            tandem, so I skipped pass books like Strang and I do comment when books calling themselves "second courses" only
+            do so because they internalize the dichotomy, rather than explicitly assuming a student’s background. Many books
+            also restrict focus to rank and column or even characteristics from the get go. This saddens me since (for
+            example) finite fields are cool, but that may resonate with very little.
+        </p>
+    
+        <p>Therefore, I’ve undertaken the task of reading through and reviewing as many major linear algebra books as I
+            could get my hands on to the extent of my ability of understanding. You may ask "Why?". Why subject yourself to
+            this ordeal? Why spend the time reading the same concept across multiple books? Well simply because I wanted an 
+            answer to the issue mentioned above.
+        </p>
+    
+        <h3>Linear Algebra, Serge Lang, 1966</h3>
+        <p>The first book I'll review is Lang’s. The book appropriately describes itself as low-brow and abstract and the
+            latter calls itself a second course and skips concepts such as reduced row echelon form (which you should learn
+            for applicability in different subjects such as electromagnetism). But it is self-contained. The organization
+            feels screwy, and for many, it's probably a boring read because of Lang’s track record. Note that fields are
+            taken to be subfields of
+            C.</p>
+    
+        <h3>Linear Algebra Done Right, Sheldon Axler, 1995</h3>
+        <p>The next book I reviewed was Linear Algebra Done Right. It calls itself a second course and as a result, skips
+            some topics like RREF. However, I can’t understate that it's self-contained and has a rather gentle prose.
+            The content focuses on R & C and is very anti-determinant, which... in a way Axler has a point that they're
+            covered poorly in intro courses, but I believe they’re still important, and the way he treats determinants and
+            characteristic polynomials is so frankly moronic that I lost 3% of my brain cells.
+        </p>
+    
+        <h3>Linear Algebra Done Wrong, Sergei Treil, 2004(?)</h3>
+        <p>Soon after, I had to review the legendary twin: Linear Algebra Done Wrong. The book works exclusively over R & C
+            and prefers to present things through row-reduction. Reading reviews, most complaints revolved around its
+            treatment of diagonalization and the exercises using undefined terms (the latter I have seen at least once).
+            The book itself is a pdf and is accessible via Treil's homepage on the Brown University web portal.
+        </p>
+    
+        <h3>Linear Algebra Problem Book, Paul Halmos, 1995</h3>
+        <p>Finding a used copy of Halmos that wasn’t falling apart was a chore. It first covers general fields and the
+            second half is taken up by canonical forms, inner product spaces, and analysis (so more R & C). The vocabulary
+            prefers a coordinate-free approach and doesn't cover Gaussian elimination and the like. Old-school typesetting
+            and a little hard to read/understand. I'd recommend it.
+        </p>
+    
+        <h3>Linear Algebra, Kenneth Hoffman & Ray Kunze, 1961</h3>
+        <p>Hoffman and Kunze cover matrices first which I get but it makes building foundations/reviewing awkward. Fields
+            are in
+            principle subfields of C without warning, but do “sometimes” warn. To its credit (to a fault), it’s extremely
+            detailed, slightly abstract and tricky at times but not unreasonably so. I would like to note however that it
+            kind of half-assed enough multilinear algebra to do determinants, and to be honest I wish it just went for it.
+            Similar old-school typesetting to Halmos and I would recommend to those more academically inclined (I put it 
+            down at determinants).
+        </p>
+    
+        <h3>Linear Algebra, Stephen H. Friedberg, Arnold J. Insel & Lawrence E. Spence, 2002</h3>
+        <p>Friedberg, Insel, and Spence is basically a modern Hoffman-Kunze. Subjectively easier(?) (at the expense
+            of some topics that I personally thought are honestly cool), and better organized. Fields are in principle
+            characteristic 0 without warning, but it does seem to warn. Probably the correct choice for most people but
+            again, some rigorous review and revision of content is in order.
+        </p>
+    
+        <h3>Linear Algebra: An Introductory Approach, Charles Curtis, 1963</h3>
+        <p>Charles Curtis seemed similar to FIS. The organization of the content threw me off for reasons I can't put my
+            finger on, and friends of mine in undergrad who took linear algebra with this book as the course’s supplement
+            didn't like it.
+        </p>
+    
+        <h3>Algebra, Michael Artin, 1991</h3>
+        <p>Artin was really more an algebra book and consequently, out of my league. However I want to state that it takes
+            a linear algebra-centric approach and therefore covers linear algebra from the ground up. It’s a fairly good
+            book overall, and if you're a stronger student who wants to be efficient this is probably the way to go.
+        </p>
+    
+        <h3>Abstract Linear Algebra, Morton Curtis, 1990</h3>
+        <p>Morton Curtis was a curveball for me. It’s very abstract (over a general field) and it finishes off by
+            classifying normed algebras over R. Really short: I have a hard time believing that being efficient in
+            presentation can bring you down to < 150 pages without some omissions, but compared to other books and its use
+            in other universities, nothing stood out at a glance and the book claims to be complete. Again this one
+            stumped me and I had to put it down when I got to Rings and Polynomials
+        </p>
+    
+        <h3>A (Terse) Introduction to Linear Algebra, Katznelson and Katznelson, 2008</h3>
+        <p>K & K is Morton Curtis but a bit slower and more detailed. It’s without the normed division algebras (if it helps at all).
+        </p>
+    
+        <h3>Linear Algebra, Greub and Shilov, 1975, 1977 </h3>
+        <p>Greub and Shilov were sucker punches of books and was a mistake for me to try and pick up. They are akin to Russian-Generalist 
+            black magic and have a lot more detailed topics than the above (e.g. graded spaces, homology, quadrics, other stuff I don’t 
+            understand, etc) and Shilov had some fancier topics (reps of finite-dim algebras). Starting with determinants feels a bit meme-y 
+            but it was a challenging read compared to the rest. 
+        </p>
+    
+        <h3>Advanced Linear Algebra, Steven Roman, 2008</h3>
+        <p>Finally Roman. It assumes some linear algebra background at the onset, quickly goes through basics, then hits 
+            more advanced topics like modules, tensor products, Hilbert spaces, and some veeeeeery weird shit. My colleagues
+            joke it's akin to belonging in the stacks at a library and something you’d pick up by mistake (which I guess it was). 
+        </p>
+    
+        <p>And there you have it. A short review on every book I could get my hands on. Reading and trying to understand each one 
+            definitely was not worth it on my end. But my point is, if you’re trying to learn something new, you should start with 
+            something brave. Approach something unique. Don’t start by learning computations - where does that take you? The best 
+            methods come out of simple concepts that set the stage for topics that are harder to understand. The most enjoyable/fun 
+            topics (not the ones which one finds easiest to master) always have something unique about them, and are the subjects which 
+            students find themselves most drawn towards (or away).
+        </p>
+    
+        <p>Once you’ve gotten a solid foundation on your first principles (or ‘gimmick’, although that springs up the wrong images), 
+            you can work outwards - how can you exploit coverage in other books to maximize your learning? How does that single idea, 
+            that single principle, open up the door to an entire experience? You know you’ve hit a good idea when the floodgates 
+            open in your head and it grows from there.
+        </p>
+    
+        <p>Always work from the inside out. Forget about choosing a textbook. Instead, think of the connections between concepts. 
+            The simpler the better, and once you’ve got this into your head, everything becomes a lot lot easier.
+        </p>
+    </div>
+</body>
+
+<!-- footer -->
+<footer class="footer mt-auto py-4" style="background-color: #252525;">
+    <div class="container">
+        <div style="color: #707070;">
+            © 2023 Gordon Jeon
+        </div>
+    </div>
+</footer>
+
+<!-- scripts -->
+<script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 28.5 || document.documentElement.scrollTop > 28.5) {
+            document.getElementById("navbar").style.padding = "10px 10px";
+            document.getElementById("logo").style.fontSize = "20px";
+        } else {
+            document.getElementById("navbar").style.padding = "28px 10px";
+            document.getElementById("logo").style.fontSize = "35px";
+        }
+    }
+
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
