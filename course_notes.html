@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Course Content</title>
+
+    <style>
+        body {
+            background-image: url('images/Fo6tkDhakAEYW87.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: #f0f0f0;
+            height: 100vh;
+            margin: 0;
+            font-family: "Inter", serif;
+        }
+
+        .title-container {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+            z-index: 1000;
+            opacity: 1;
+            transition: opacity 0.2s ease; /* Smooth fade-out effect */
+        }
+
+        .title-container.hidden {
+            opacity: 0; /* Faded out */
+            pointer-events: none; /* Prevent interactions when hidden */
+        }
+
+        .card-container {
+            margin: 70rem auto; /* Push the cards downward */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2%; /* Space between cards */
+        }
+
+        @media (max-width: 1024px) {
+            .card {
+                flex: 1 1 calc(33.33% - 2%); /* 3 cards per row */
+            }
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 1 calc(50% - 2%); /* 2 cards per row */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .card {
+                flex: 1 1 100%; /* 1 card per row */
+            }
+        }
+    </style>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,200;1,14..32,200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div id="navbar">
+        <div class="brand-container">
+            <img src="images/logo.png" alt="Logo" class="avatar">
+        </div>
+
+        <div id="navbar-right">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="course_notes.html">Course Content</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="bio.html">Bio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Title Container -->
+    <div class="title-container" id="titleContainer">Course Content</div>
+
+    <!-- Cards Section -->
+    <div class="card-container">
+        <a href="notes\APS360 Course Textbook\Textbook.pdf" class="card-link" target="_blank" rel="noopener noreferrer">
+            <div class="card">
+                <img src="images/Screenshot 2025-01-16 003100.png" class="card-image">
+                <div class="card-hover-text">
+                    <p>APS360 Lecture Notes</p>
+                </div>
+            </div>
+        </a>        
+    
+        <a href="notes\MIE312 Formula Sheets" class="card-link" target="_blank" rel="noopener noreferrer">
+            <div class="card">
+                <img src="images\312 cover.png" class="card-image">
+                <div class="card-hover-text">
+                    <p>MIE312 Exam Formula Sheets</p>
+                </div>
+            </div>
+        </a>
+    
+        <a href="notes\MIE301 Final Exam Notes\Final Exam Cheat Sheet.pdf" class="card-link" target="_blank" rel="noopener noreferrer">
+            <div class="card">
+                <img src="images\301 cover.png" class="card-image">
+                <div class="card-hover-text">
+                    <p>MIE301 Final Exam Notes</p>
+                </div>
+            </div>
+        </a>
+    
+        <a href="notes\MIE222 Notes" class="card-link" target="_blank" rel="noopener noreferrer">
+            <div class="card">
+                <img src="images\222 cover.png" class="card-image">
+                <div class="card-hover-text">
+                    <p>MIE222 Lecture Notes Ch. 5 - 10</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="notes\ESC102 Handbook\Praxis Handbook.pdf" class="card-link" target="_blank" rel="noopener noreferrer">
+            <div class="card">
+                <img src="images\102 cover.jpg" class="card-image">
+                <div class="card-hover-text">
+                    <p>ESC102 Design Handbook</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="notes\MAT185 Assignments\Notes.pdf" class="card-link" target="_blank" rel="noopener noreferrer">
+            <div class="card">
+                <img src="images\185 cover.png" class="card-image">
+                <div class="card-hover-text">
+                    <p>MAT185 Lecture Notes</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="notes\PHY180 Pendulum Report\Report.pdf" class="card-link" target="_blank" rel="noopener noreferrer">
+            <div class="card">
+                <img src="images\180 cover.jpg" class="card-image">
+                <div class="card-hover-text">
+                    <p>PHY180 Pendulum Report</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        // Add scroll functionality for the title container
+        window.addEventListener('scroll', () => {
+            const titleContainer = document.getElementById('titleContainer');
+            if (window.scrollY > 50) { // Adjust threshold as needed
+                titleContainer.classList.add('hidden');
+            } else {
+                titleContainer.classList.remove('hidden');
+            }
+        });
+
+        // Shrink navbar on scroll
+        window.onscroll = function () {
+            const navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 28.5 || document.documentElement.scrollTop > 28.5) {
+                navbar.style.padding = "10px 10px";
+            } else {
+                navbar.style.padding = "28px 10px";
+            }
+        };
+    </script>
+</body>
+
+</html>

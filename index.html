@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gordon J.W.</title>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,200;1,14..32,200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navbar -->
+  <div id="navbar">
+    <div class="brand-container">
+      <img src="images/logo.png" alt="Logo" class="avatar">
+    </div>
+    
+    <div id="navbar-right">
+      <div class="links">
+        <a href="index.html">Home</a>
+        <a href="course_notes.html">Course Content</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="bio.html">Bio</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main-content">
+    <img src="images/FneJZINaAAARmK1.jpg" alt="Image 1" class="main-image left">
+    <img src="images/FpKJm7oaAAICdbv.jpg" alt="Image 2" class="main-image right">
+  </div>
+
+  <!-- Cards Section -->
+  <div class="card-container">
+    <a href="course_notes.html" class="card-link">
+      <div class="card">
+        <img src="images\Screenshot 2025-01-16 003100.png" class="card-image">
+        <div class="card-hover-text">
+          <p>Course Notes</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="portfolio.html" class="card-link">
+      <div class="card">
+        <img src="images\UT+Cyclone+II+Render.png" class="card-image">
+        <div class="card-hover-text">
+          <p>Engineering Portfolio</p>
+        </div>
+      </div>
+    </a>
+
+    <a href="bio.html" class="card-link">
+      <div class="card">
+        <img src="images\about me cover.png" class="card-image">
+        <div class="card-hover-text">
+          <p>About Me</p>
+        </div>
+      </div> 
+    </a>
+
+    <a href="contact.html" class="card-link">
+      <div class="card">
+        <img src="images\F8jOeidbsAAvCU6.jfif" class="card-image">
+        <div class="card-hover-text">
+          <p>Contact Me</p>
+        </div>
+      </div>
+    </a>
+  </div>
+
+  <!-- JavaScript -->
+  <script>
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      const navbar = document.getElementById("navbar");
+      if (document.body.scrollTop > 28.5 || document.documentElement.scrollTop > 28.5) {
+        navbar.style.padding = "10px 10px";
+      } else {
+        navbar.style.padding = "28px 10px";
+      }
+    }
+  </script>
+</body>
+
+</html>

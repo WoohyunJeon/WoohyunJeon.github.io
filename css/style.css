@@ -1,0 +1,377 @@
+/* Fade-In Animation */
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Global Body Styles */
+body {
+    animation: fadeInAnimation ease 1s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    font-family: "Inter", serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar Styles */
+#navbar {
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 28px 10px;
+    transition: 0.09s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 99;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    justify-content: space-between; /* Space out brand and links */
+    align-items: center; /* Center the items vertically */
+}
+
+#navbar a {
+    float: left;
+    color: black;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.brand-container {
+    width: auto; /* Adjust to fit the avatar content */
+    display: flex;
+    align-items: center; /* Center the avatar vertically */
+    justify-content: center;
+}
+
+.avatar {
+    width: 50px; /* Restrict the avatar size */
+    height: 50px; /* Ensure a consistent aspect ratio */
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover; /* Prevents stretching */
+}
+
+#navbar-right {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 2em;
+}
+
+#navbar-right .links a {
+    padding: 0.25em 1.75em;
+}
+
+/* Main Content */
+.main-content {
+    width: 100%;
+    height: 75rem;
+    margin-bottom: 2rem;
+}
+
+.main-image {
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-image.left {
+    float: left;
+}
+
+.main-image.right {
+    float: right;
+}
+
+/* Cards */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%;
+}
+
+.card {
+    font-family: "Inter", serif;
+    font-optical-sizing: 14;
+    font-weight: 300;
+    font-size: 20px;
+    font-style: normal;
+    aspect-ratio: 4 / 3; /* Horizontal orientation */
+    border: 1px solid #D3D3D3;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative; /* Required for hover text overlay */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+}
+
+.card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the card area */
+    opacity: 1; /* Default full opacity */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth zoom and fade effects */
+}
+
+.card-hover-text {
+    width: 70%; /* Wider box */
+    padding: 0.75rem 1rem; /* Balanced spacing inside */
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover .card-image {
+    transform: scale(1.1); /* Zoom the image on hover */
+    opacity: 0.6; /* Fade the image */
+}
+
+.card:hover .card-hover-text {
+    opacity: 1; /* Show overlay text */
+    pointer-events: auto; /* Enable interaction */
+    cursor: pointer; /* Show clickable cursor */
+}
+
+.card-link {
+    display: block;
+    width: 23%; /* Each card takes up 24% of the container's width */
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color */
+  }
+
+
+
+/* Biography Container */
+.bio-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10rem auto; /* Increase top margin to lower the container */
+    width: 80%;
+    max-width: 1200px;
+    min-height: 50vh;
+    gap: 2rem; /* Space between the text and image */
+}
+
+.bio-text {
+    flex: 1; /* Takes half of the space */
+    padding: 1rem;
+    font-family: "Inter", serif;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: left;
+}
+
+.bio-image {
+    flex: 1; /* Takes half of the space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-image img {
+    width: 100%;
+    max-width: 300px; /* Restrict the size */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+
+
+/* Header Section */
+.portfolio-header {
+    text-align: center;
+    margin-top: 70rem;
+    font-family: "Inter", sans-serif;
+    color: #333;
+}
+
+.portfolio-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.portfolio-header p {
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    color: #666;
+}
+
+/* Portfolio Container */
+.portfolio-container {
+    display: flex;
+    justify-content: space-between; /* Ensures text and image are on separate sides */
+    align-items: center; /* Aligns text and image vertically */
+    flex-wrap: wrap; /* Allows wrapping for smaller screens */
+    margin: 0 auto; /* Adjust margin for spacing */
+    width: 80%;
+    max-width: 1200px;
+    gap: 2rem; /* Space between text and image */
+    background-color: #f9f9f9; /* Optional for visibility */
+    padding: 2rem;
+    border-radius: 8px; /* Adds a slight rounded corner */
+    font-size: 1.2rem;
+}
+
+/* Portfolio Text */
+.portfolio-text {
+    flex: 1; /* Ensures text takes up one-half of the container */
+    font-family: "Inter", serif;
+    font-size: 1.2rem;
+    line-height: 1.8rem;
+    text-align: left;
+    word-wrap: break-word; /* Prevent text overflow issues */
+}
+
+/* Portfolio Image */
+.portfolio-image {
+    flex: 1; /* Ensures image takes up one-half of the container */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-image img {
+    width: 100%;
+    border-radius: 8px; /* Adds rounded corners to the image */
+    object-fit: cover; /* Ensures the image maintains aspect ratio */
+}
+
+
+/* Contact Container */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh; /* Full-page height */
+    padding: 2rem;
+}
+
+.title-box {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 40px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-family: "Inter", serif;
+    transition: opacity 0.3s ease; /* Smooth fade-out */
+}
+
+.title-box.hidden {
+    opacity: 0; /* Fade out the box */
+    pointer-events: none; /* Prevent interactions */
+}
+
+/* Title and Paragraph */
+.contact-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.contact-container p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* Contact Links */
+.contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-links a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.75rem 1.5rem;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    color: #000000;
+    transition: all 0.3s ease;
+    display: inline-block;
+    text-align: center;
+}
+
+.contact-links a:hover {
+    background-color: #000000;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .card {
+        width: 45%; /* Adjust card width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 90%; /* Adjust card width for smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .portfolio-container {
+        flex-direction: column; /* Stacks text and image vertically */
+        align-items: center;
+    }
+
+    .portfolio-text, .portfolio-image {
+        flex: none;
+        width: 100%;
+        text-align: center; /* Center-aligns text for smaller screens */
+    }
+
+    .portfolio-image img {
+        max-width: 100%;
+    }
+}

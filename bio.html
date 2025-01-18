@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bio - About Me</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,200;1,14..32,200&display=swap" rel="stylesheet">
+</head>
+  
+<body>
+    <!-- Navbar -->
+    <div id="navbar">
+        <div class="brand-container">
+            <img src="images/logo.png" alt="Logo" class="avatar">
+        </div>
+        
+        <div id="navbar-right">
+            <div class="links">
+                <a href="index.html">Home</a>
+                <a href="course_notes.html">Course Content</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="bio.html">Bio</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Biography Container -->
+    <div class="bio-container">
+        <!-- Left Half: Text -->
+        <div class="bio-text">
+            <h1>About Me</h1>
+            <p>
+                Hi! I'm Woohyun, but everyone calls me <b>Gordon</b>. I'm a mechanical engineering student based in Canada, currently enrolled at the University of Toronto. I'm also minoring in robotics and mechatronics.
+            </p>
+            <p>
+                I created this website to share my university projects and notes. Over time, it has evolved into a resource for students and anyone curious to learn.
+            </p>
+            <p>
+                My research interests include the applications of ceramics in defense, autonomous systems, active protection systems, and energy systems related to hypersonic flight. Outside of work, I enjoy listening to podcasts, hiking, experimenting with new technology, snapping photos, and drafting designs I hope to bring to life.
+            </p>
+            <p>
+                Thanks for stopping by! "Oh, and in case I don't see you, good afternoon, good evening and good night!"
+            </p>
+        </div>
+
+        <!-- Right Half: Image -->
+        <div class="bio-image">
+            <img src="images\edit aeac.png">
+        </div>
+    </div>
+
+
+
+    <!-- JavaScript -->
+    <script>
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+            const navbar = document.getElementById("navbar");
+            if (document.body.scrollTop > 28.5 || document.documentElement.scrollTop > 28.5) {
+            navbar.style.padding = "10px 10px";
+            } else {
+            navbar.style.padding = "28px 10px";
+            }
+        }
+    </script>
+</body>
+
+</html>
