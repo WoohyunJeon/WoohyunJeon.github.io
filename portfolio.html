@@ -79,18 +79,94 @@
     </div>
 
     <!-- Portfolio Container -->
+
+    <div class="portfolio-container">
+        <div class="portfolio-text">
+            <h2>Eötvös Number Analysis - Surface Hydrophobicity Estimation</h2>
+            <p>This project focused on quantifying surface hydrophobicity by analyzing the shape and behavior of a droplet resting on a substrate. Using experimental data extracted from 
+                droplet profile images, I implemented a MATLAB pipeline for polynomial regression (orders 2-8), numerical differentiation, and integration. A total of 22 data points were 
+                processed using least-squares fitting, and curve accuracy was evaluated using the R² coefficient.
+            </p>        
+        
+            <p>Higher-order polynomials (6th and 8th) yielded contact angles exceeding 150°, confirming superhydrophobic behavior. The fitted curves were integrated using the trapezoidal 
+                rule to estimate droplet volume, which was then used to calculate the Eötvös number (Eo ≈ 1.96). This indicated that surface tension forces dominated over gravity, consistent 
+                with the droplet's near-spherical shape.
+            </p>
+
+            <p> While higher-order fits improved curvature accuracy, they also introduced overfitting near the data boundaries. I validated the pipeline's consistency by comparing results 
+                across polynomial orders and analyzing fit sensitivity. The full process enabled accurate, repeatable estimates of both contact angle and volume based solely on image-derived geometry.
+            </p>        
+        </div>
+
+        <div class="portfolio-image">
+            <img src="images\Screenshot 2025-05-16 050921.png" alt="Portfolio Image">
+        </div>
+    </div>
+
+    <div class="portfolio-container">
+        <div class="portfolio-image">
+            <img src="images\Screenshot 2025-05-16 051054.png" alt="Portfolio Image">
+        </div>
+    </div>
+    
+    <div class="portfolio-container">
+        <div class="portfolio-image">
+            <img src="images\Screenshot 2025-05-16 050842.png" alt="Portfolio Image">
+        </div>
+    </div>
+
+
+    <div class="portfolio-container">
+        <div class="portfolio-text">
+            <h2>UT Vulcan</h2>
+            <p>Vulcan is a quadcopter reconnaissance drone designed for the 2025 AEAC competition. Its primary objective was to locate and map fire hotspots using infrared detection while 
+                maintaining autonomy and flight stability. The design prioritized simplicity, maneuverability, and rapid data acquisition, using a lightweight airframe to enable speeds 
+                up to 15 m/s and a range of approximately 13 km.
+            </p>        
+        
+            <p>
+                The airframe features a hybrid-frame layout with a carbon fiber mainplate stack and reinforced cross-bracing for torsional stiffness. An onboard NVIDIA Jetson Orin Nano ran 
+                a custom computer vision stack using YOLOv8 and a 160° FOV infrared sensor to detect and localize fire signatures in real time. Localization data was fused with drone 
+                telemetry using an Extended Kalman Filter to continuously generate georeferenced KML files for mission mapping.
+            </p>
+
+            <p> I led the mechanical design and manufacturing of Vulcan's airframe, focusing on structural stiffness, low weight, and ease of integration for avionics and propulsion 
+                components. This included designing the cross-braced frame layout, selecting composite materials, fabricating custom mounts, and assembling the complete airframe. I 
+                collaborated closely with the software and electrical teams to ensure accessibility, EMI shielding, and structural robustness throughout testing.
+            </p>        
+        </div>
+
+        <div class="portfolio-image">
+            <img src="images\Screenshot 2025-05-16 052717.png" alt="Portfolio Image">
+        </div>
+    </div>
+
+    <div class="portfolio-container">
+        <div class="portfolio-image">
+            <img src="images\Screenshot 2025-05-16 040746.png" alt="Portfolio Image">
+        </div>
+    </div>
+
+
     <div class="portfolio-container">
         <!-- Left Half: Text -->
         <div class="portfolio-text">
             <h2>UT Atlas</h2>
-            <p>Atlas is a fixed-wing drone with a VTOL configuration, designed to carry a passenger payload for the 2024 AEAC competition. 
-                The design prioritized aerodynamic efficiency and operational radius of 10 km. 
-                However, challenges in balancing the mass budget and acceptable levels of torsional stiffness led to the project being discontinued before it was entered into the initial design proposal.
-                In its place, UT Cyclone II was redesigned for the competition.
+            <p>Atlas is a hybrid VTOL UAV developed as a subscale prototype for urban air mobility systems in the 2024 AEAC competition. The vehicle featured a quadcopter-fixed-wing 
+                configuration, designed to autonomously transport a simulated four-passenger payload, execute precision landings in constrained environments, and demonstrate 
+                long-range cruise performance with a predicted range of up to 48 km.
             </p>        
         
-            <p>I was directly involved in manufacturing the control surfaces using carbon fiber layups and conducted CFD and FEA in Ansys Fluent and SolidWorks to design, analyze, and optimize the design. 
-            </p>        
+            <p>The airframe used a twin-boom low-wing layout with a composite-reinforced fuselage and modular booms supporting both the vertical lift rotors and tail surfaces. A 
+                single rear-mounted pusher motor enabled efficient fixed-wing cruise. Custom CFRP box spars and GFRP-clad foam wings ensured sufficient stiffness for high-speed forward 
+                flight and multirotor yaw stability. A full autonomy stack was implemented using a Jetson Nano and Luxonis OAK-D S2 stereo camera, supported by simulation-driven PID 
+                tuning and pose estimation via YOLOv8-based computer vision.
+            </p>    
+            
+            <p>I conducted aerodynamic analysis, cruise and hover performance modeling, and PID tuning in Gazebo simulation. I contributed to the estimation of stall 
+                speed and optimal cruise velocity, evaluated fixed-wing stability through simulation, and supported transition tuning between multirotor and fixed-wing flight. I also 
+                developed flight test procedures to validate transition stability and hover control under varying payload conditions.
+            </p>
         </div>
 
         <!-- Right Half: Image -->
@@ -100,16 +176,30 @@
     </div>
 
     <div class="portfolio-container">
+        <div class="portfolio-image">
+            <img src="images\Screenshot 2025-05-16 040718.png" alt="Portfolio Image">
+        </div>
+    </div>
+
+    <div class="portfolio-container">
         <div class="portfolio-text">
-            <h2>UT Cyclone II</h2>
-            <p>Cyclone II is a hexacopter drone with a spiral configuration, designed to compete in place of UT Atlas for the 2024 AEAC competition. 
-                The design was able to carry a 2 kg passenger payload over 13 km and the total mass weighed in at 14 kg. 
-                With Cyclone II, the team scored 1st in the on-site presentation.
+            <h2>UT Cyclone</h2>
+            <p>UT Cyclone is a heavy-lift hexacopter platform developed over multiple years by the UTAT UAS division, evolving into a versatile aerial vehicle for both passenger transport 
+                nd autonomous payload delivery. The drone features a spiral-frame configuration that supports modular composite arms, robust lifting capability, and precise control — enabling 
+                it to perform across diverse AEAC competition roles from drone taxiing to water firefighting missions.
             </p>        
         
-            <p> I was in charge of researching and developing the team's proprietary prepreg carbon fiber, with a focus on ensuring spare parts were available to address potential catastrophic failures.
-                My efforts enabled the team to perform post-flight repairs, including restoring the drone's arms and landing gear, ensuring Cyclone II was airworthy for the next competition phase.
-            </p>        
+            <p> Originally adapted in 2024 as a fallback for the Atlas VTOL concept, Cyclone was configured to carry a 2 kg passenger payload over a 13 km range, achieving a total system mass of 
+                14 kg. In this role, it prioritized mechanical reliability, ease of repair, and autonomous waypoint navigation. The team scored 1st in the on-site technical presentation, and 
+                post-flight, the airframe was restored using prepreg carbon fiber components and hot-swappable spares developed in-house.
+            </p>    
+
+            <p>In 2025, Cyclone III was redesigned for aerial firefighting and optimized for performance under heavy load. It featured shortened arms for increased torsional stiffness, a retractable 
+                2.5 L water delivery payload, and a custom plug-based intake mechanism. Enhanced onboard autonomy, powered by a Jetson Orin and computer vision tracking using YOLOv8, enabled accurate 
+                target tank localization and smooth water release. Cyclone's mature platform made it the team's most reliable system for extended autonomous missions.
+            </p>
+            
+            
         </div>
 
         <div class="portfolio-image">
@@ -119,23 +209,59 @@
 
     <div class="portfolio-container">
         <div class="portfolio-image">
+            <img src="images\Screenshot 2025-05-16 040804.png" alt="Portfolio Image">
+        </div>
+    </div>
+
+    <div class="portfolio-container">
+        <div class="portfolio-image">
             <img src="images\UT_Cyclone_in_flight.jpg" alt="Portfolio Image">
         </div>
         <p> 
-            UT Cyclone II in flight during the 2024 AEAC competition, endurence testing phase.
+            Cyclone in flight during the 2024 AEAC competition, endurence testing phase.
         </p>  
+    </div>
+
+    <div class="portfolio-container">
+        <p> 
+            Cyclone in flight during the 2025 AEAC competition, payload retrieval phase.
+        </p> 
+        <div class="portfolio-image">
+            <img src="images\_BFilHMp.jpeg" alt="Portfolio Image">
+        </div> 
+    </div>
+
+    <div class="portfolio-container">
+        <div class="portfolio-image">
+            <img src="images\oolDxDEg.jpeg" alt="Portfolio Image">
+        </div> 
+        <p> 
+            Cyclone in flight during the 2025 AEAC competition, payload delivery phase.
+        </p> 
+    </div>
+
+    <div class="portfolio-container">
+        <p> 
+            Vulcan in flight during the 2025 AEAC competition, geolocation phase.
+        </p> 
+        <div class="portfolio-image">
+            <img src="images\M6AYCbSB.jpeg" alt="Portfolio Image">
+        </div> 
     </div>
 
     <div class="portfolio-container">
         <div class="portfolio-text">
             <h2>PID Tuning Stand</h2>
-            <p>The PID tuning stand is a single-axis stabilization platform designed to enable the team to test and fine-tune the PID parameters of copter-drone designs.
+            <p>The PID tuning stand is a single-axis stabilization platform developed to safely test and fine-tune the PID parameters of multirotor drone designs. It allows for 
+                precise control tuning without risking damage to the airframe during early-stage flight testing.
             </p>
 
-            <p>I was tasked with researching the feasibility of designing a gyroscopic stabilizer for tuning the drones' PID parameters. However, I proposed to design a single-axis stand to simplify the process, leveraging the symmetrical nature of most drones.
+            <p>I initially explored gyroscopic stabilization methods but ultimately proposed a simpler single-axis design, leveraging the inherent symmetry of most copter-style 
+                drones. This approach streamlined the setup and reduced mechanical complexity while maintaining effective tuning capability.
             </p>   
             
-            <p>By designing the tuning stand, the team significantly reduces the budget required for spare parts by eliminating the risk of catastrophic failures caused by crash landings.
+            <p>By implementing this system, the team significantly reduced the risk of crash-induced failures during tuning, lowering the need for replacement parts and helping 
+                to conserve the budget across multiple test campaigns.
             </p>
         </div>
 
