@@ -83,6 +83,37 @@
     <div class="portfolio-container">
         <div class="portfolio-text">
             <h2>Eötvös Number Analysis - Surface Hydrophobicity Estimation</h2>
+            <p>This project aimed to automate diabetic retinopathy (DR) classification from retinal scan images using a transfer learning pipeline. The team implemented a convolutional neural network 
+                (CNN) based on VGG16, paired with a custom multilayer perceptron (MLP) classifier, to categorize retinal images into five disease stages (0-4).
+            </p>        
+        
+            <p>I contributed to architecture selection, dataset curation, and model optimization. I co-led the integration of a high-resolution preprocessing pipeline using contrast normalization, 
+                Gaussian blurring, and adaptive cropping. To address class imbalance, we applied undersampling and targeted augmentation (rotation and flipping), generating a balanced dataset of 
+                6000 images per class. I also upgraded my local machine to support GPU-accelerated training.
+            </p>
+
+            <p> Model improvement focused on hyperparameter tuning, where I shifted from heuristic to systematic optimization, adjusting learning rates, dropout ratios, and normalization layers. 
+                I helped implement a Random Forest baseline for benchmarking and evaluated model performance using internal and external test sets. Final testing accuracy reached 60%, with 
+                stronger classification in late-stage DR classes. Feature map visualizations confirmed that the CNN captured increasingly abstract vascular structures through its convolutional layers.
+            </p>        
+        </div>
+
+        <div class="portfolio-image">
+            <img src="images/Screenshot 2025-05-16 182002.png" alt="Portfolio Image">
+        </div>
+    </div>
+
+    <div class="portfolio-container">
+        <div class="portfolio-image">
+            <img src="images\Screenshot 2025-05-16 182355.png" alt="Portfolio Image">
+        </div>
+    </div>
+
+
+
+    <div class="portfolio-container">
+        <div class="portfolio-text">
+            <h2>Eötvös Number Analysis - Surface Hydrophobicity Estimation</h2>
             <p>This project focused on quantifying surface hydrophobicity by analyzing the shape and behavior of a droplet resting on a substrate. Using experimental data extracted from 
                 droplet profile images, I implemented a MATLAB pipeline for polynomial regression (orders 2-8), numerical differentiation, and integration. A total of 22 data points were 
                 processed using least-squares fitting, and curve accuracy was evaluated using the R² coefficient.
