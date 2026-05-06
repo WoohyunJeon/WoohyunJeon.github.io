@@ -7,26 +7,13 @@ Welcome to my personal website and portfolio. This site was built using plain HT
 
 ---
 
-## 🧭 Site Overview
+## 🧭 Overview
 
 - **Home** — Landing page
 - **Bio** — A short summary about me
 - **Portfolio** — Highlights of projects and experiences
 - **Course Notes** — Personal academic notes and references
 - **Contact** — How to reach me
-
----
-
-## 🛠️ Built With
-
-- **HTML5**
-- **CSS3**
-
----
-
-## 📬 Contact
-
-Feel free to reach out via the [Contact Page](https://woohyunjeon.github.io/contact.html)
 
 ---
 
