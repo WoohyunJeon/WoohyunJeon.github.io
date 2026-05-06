@@ -17,9 +17,11 @@ body {
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
-    min-height: 100vh;
+    min-height: 100vh; /* Keep min-height for overall page structure */
     display: flex;
     flex-direction: column;
+    height: 100vh; /* Ensure body takes full viewport height */
+    margin: 0; /* Remove default body margin */
 }
 
 /* Navbar Styles */
@@ -92,20 +94,13 @@ body {
     width: 100%;
     height: 75rem;
     margin-bottom: 2rem;
+    display: flex;
 }
 
 .main-image {
     width: 50%;
     height: 100%;
     object-fit: cover;
-}
-
-.main-image.left {
-    float: left;
-}
-
-.main-image.right {
-    float: right;
 }
 
 /* Cards */
@@ -373,5 +368,55 @@ body {
 
     .portfolio-image img {
         max-width: 100%;
+    }
+}
+
+/* Title Container (for pages like Course Content and Portfolio) */
+.title-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.2s ease; /* Smooth fade-out effect */
+}
+
+.title-container.hidden {
+    opacity: 0; /* Faded out */
+    pointer-events: none; /* Prevent interactions when hidden */
+}
+
+/* Card Container specific to Course Content */
+.course-card-container {
+    margin: 70rem auto; /* Push the cards downward */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2%; /* Space between cards */
+}
+
+@media (max-width: 1024px) {
+    .course-card-container .card {
+        flex: 1 1 calc(33.33% - 2%); /* 3 cards per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .course-card-container .card {
+        flex: 1 1 calc(50% - 2%); /* 2 cards per row */
+    }
+}
+
+@media (max-width: 480px) {
+    .course-card-container .card {
+        flex: 1 1 100%; /* 1 card per row */
     }
 }

@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Gordon J.W.</title>
+  <title>Home</title>
 
   <!-- External CSS -->
   <link rel="stylesheet" href="css/style.css">
@@ -34,10 +34,10 @@
   </div>
 
   <!-- Main content -->
-  <div class="main-content">
-    <img src="images/FneJZINaAAARmK1.jpg" alt="Image 1" class="main-image left">
-    <img src="images/FpKJm7oaAAICdbv.jpg" alt="Image 2" class="main-image right">
-  </div>
+  <main class="main-content">
+    <img src="images/FneJZINaAAARmK1.jpg" alt="A drone on a workbench." class="main-image">
+    <img src="images/FpKJm7oaAAICdbv.jpg" alt="A different drone on a workbench." class="main-image">
+  </main>
 
   <!-- Cards Section -->
   <div class="card-container">
@@ -45,7 +45,7 @@
       <div class="card">
         <img src="images\Screenshot 2025-01-16 003100.png" class="card-image">
         <div class="card-hover-text">
-          <p>Course Notes</p>
+          <p>Course Content</p>
         </div>
       </div>
     </a>
@@ -54,7 +54,7 @@
       <div class="card">
         <img src="images\UT+Cyclone+II+Render.png" class="card-image">
         <div class="card-hover-text">
-          <p>Engineering Portfolio</p>
+          <p>Portfolio</p>
         </div>
       </div>
     </a>
@@ -79,18 +79,7 @@
   </div>
 
   <!-- JavaScript -->
-  <script>
-    window.onscroll = function () { scrollFunction() };
-
-    function scrollFunction() {
-      const navbar = document.getElementById("navbar");
-      if (document.body.scrollTop > 28.5 || document.documentElement.scrollTop > 28.5) {
-        navbar.style.padding = "10px 10px";
-      } else {
-        navbar.style.padding = "28px 10px";
-      }
-    }
-  </script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>
